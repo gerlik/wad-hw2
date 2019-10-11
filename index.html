@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="res/images/favicon.ico" rel="icon">
+    <link href="res/css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Livvic&display=swap" rel="stylesheet">
+    <title>My Dashboard</title>
+</head>
+<body>
+<main>
+    <header>
+        <strong>Welcome to your dashboard!</strong>
+    </header>
+    <section id="container">
+        <section id="main">
+            <div class="content">
+                <div class="tab active" id="profile-container">
+                    <div id="profile">
+                        <div class="avatar">
+                            <img alt="My picture" id="picture" src="res/images/me.png">
+                        </div>
+                        <div class="info">
+                            <ul>
+                                <li id="name">John Doe</li>
+                                <li id="birthdate">11/10/1990</li>
+                                <li id="faculty">Software Engineering</li>
+                            </ul>
+                        </div>
+                        <div id="gpa">
+                            <strong>2.75</strong>
+                        </div>
+                        <div class="clear-fix"></div>
+                    </div>
+                </div>
+                <div class="tab" id="courses-container">
+                    <h1 class="title">Courses</h1>
+                    <table id="courses">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Course Title</th>
+                            <th>Semester</th>
+                            <th>Grade</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Agile software development</td>
+                            <td>1</td>
+                            <td>82</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>System modeling</td>
+                            <td>1</td>
+                            <td>85</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Object-oriented programming</td>
+                            <td>2</td>
+                            <td>99</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Estonian language Level A2</td>
+                            <td>2</td>
+                            <td>65</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <br>
+                    <div>
+                        <button class="blue-button" id="add-course-button">+</button>
+                        <span id="add-course">
+                            <input class="input" id="title" placeholder="Course title" type="text">
+                            <input class="input" id="semester" max="8" min="1" placeholder="Semester" type="number">
+                            <input class="input" id="grade" max="100" min="0" placeholder="Grade" type="number">
+                            <button class="green-button" id="save-course">Save</button>
+                            <button class="grey-button" id="cancel-course">Cancel</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="controls">
+                <button class="pill active" id="profile-button">Profile</button>
+                <button class="pill" id="courses-button">Courses</button>
+            </div>
+        </section>
+    </section>
+    <footer>
+        <ul class="links">
+            <li>
+                <a href="https://ois2.ut.ee/" target="_blank">OIS</a>
+            </li>
+            <li>
+                <a href="https://courses.cs.ut.ee/" target="_blank">Courses</a>
+            </li>
+        </ul>
+    </footer>
+</main>
+
+</body>
+</html>
