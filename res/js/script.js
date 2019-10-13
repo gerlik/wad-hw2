@@ -1,5 +1,12 @@
 $(function () {
 
+
+    // js function to reset add course fields
+    function reset_fields(){
+        $('.input').val('');
+        $('#add-course').toggle();
+    }
+
     // Tab switch
     $('.courses').click(function () {
         $(".profile").removeClass("active");
@@ -18,9 +25,8 @@ $(function () {
 
     // Reset new course fields
     $('#cancel-course').click(function () {
-        $('.input').val('');
-        $('#add-course').toggle();
-    })
+        reset_fields()
+    });
 
     // Save course fields and add to table
     $('#save-course').click(function () {
@@ -36,7 +42,10 @@ $(function () {
                 .append(`<td>${title}</td>`)
                 .append(`<td>${semester}</td>`)
                 .append(`<td>${grade}</td>`);
-    })
+        reset_fields()
+    });
+
+    // GPA calculations
 
 });
 
