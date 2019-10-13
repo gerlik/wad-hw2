@@ -32,10 +32,10 @@ $(function () {
         $('#courses > tbody:last-child')
             .append($('<tr>'))
             // adding variable to string, got help from: https://stackoverflow.com/questions/3304014/how-to-interpolate-variables-in-strings-in-javascript-without-concatenation/50337497
-                .append($(`<td>${number}</td>`))
-                .append($(`<td>${title}</td>`))
-                .append($(`<td>${semester}</td>`))
-                .append($(`<td>${grade}</td>`));
+                .append(`<td>${number}</td>`)
+                .append(`<td>${title}</td>`)
+                .append(`<td>${semester}</td>`)
+                .append(`<td>${grade}</td>`);
     })
 
 });
