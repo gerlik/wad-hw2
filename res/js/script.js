@@ -1,4 +1,77 @@
+class User {
+    constructor(firstname, lastname, birthdate, faculty, gpa) {
+        this._firstname = firstname;
+        this._lastname = lastname;
+        this._birthdate = birthdate;
+        this._faculty = faculty;
+        this._gpa = gpa;
+    }
+
+    get fullname(){
+        return this._firstname + " " + this._lastname;
+    }
+
+    get birthdate(){
+        return this._birthdate;
+    }
+
+    get faculty(){
+        return this._faculty;
+    }
+
+    get gpa(){
+        return this._gpa;
+    }
+}
+
+class Course {
+    constructor(title, semester, grade) {
+        this._title = title;
+        this._semester = semester;
+        this._grade = grade;
+    }
+
+    get title(){
+        return this._title;
+    }
+
+    get semester(){
+        return this._semester;
+    }
+
+    get grade(){
+        return this._grade;
+    }
+}
+
+
 $(function () {
+
+    $user = new User("John", "Doe", "11/10/1990", "Computer Science", 2.75);
+    $courses = [
+        new Course("Agile software development", 1, 82),
+        new Course("System modelling", 1, 85),
+        new Course("OOP", 2, 94),
+        new Course("Estonian Language Level A2", 2, 65)
+    ]
+
+    $(".info ul").append("<li id='name'>" + $user.fullname + "</li>")
+        .append("<li id='birthday'>" + $user.birthdate + "</li>")
+        .append("<li id='faculty'>" + $user.faculty + "</li>");
+
+    $("#gpa strong").text($user.gpa);
+
+    $.each($courses, function(key, val){
+        $title = $courses[key].title;
+        $semester = $courses[key].semester;
+        $grade = $courses[key].grade;
+        $("#courses tbody").append("<tr>")
+            .append("<td>" + $('#courses > tbody tr').length + "</td>")
+            .append("<td>" + $title + "</td>")
+            .append("<td>" + $semester + "</td>")
+            .append("<td>" + $grade + "</td>");
+    });
+
 
     // js function to reset add course fields
     function reset_fields(){
@@ -94,4 +167,3 @@ $(function () {
     });
 
 });
-
